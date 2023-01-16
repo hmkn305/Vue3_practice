@@ -6,11 +6,11 @@ const pBgColorEvent = ref("white");
 const onPClickWithEvent = (bgColor: string, event: MouseEvent): void => {
 	pBgColorEvent.value = bgColor;
 	pMsg.value = event.timeStamp.toString();
-};
+}
 </script>
 
 <template>
 	<p v-on:click="onPClickWithEvent('green', $event)" v-bind:style="{backgroundColor: pBgColorEvent}">
-		{{pMsg}}
+		{{ pMsg }}
 	</p>
 </template>
